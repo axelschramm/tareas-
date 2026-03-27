@@ -1,0 +1,21 @@
+"""Felipe compra dos pack de cervezas(6 latas por pack), una marca escudo y la otra heineken, 
+el total de su compra fue $4.500 y el pack de escudo costó 2100, 
+¿cuánto es el costo de cada lata de cerveza heineken y escudo?"""
+pack=0
+escudo=0
+heineken=0
+lata_heineken=0
+lata_escudo=0
+totalc=0
+pack1= 0
+pack=int(input("cantidad de pack de cervesas heineken:"))
+pack1=int(input("cantidad de pack de cervesas escudo:"))
+escudo=int(input("precio de escudo:"))
+totalc=int(input("ingrese total de la compra:"))
+pack_hein=pack*6
+pack_2=pack1*6
+heineken=totalc-escudo
+lata_heineken=heineken/pack_hein
+lata_escudo=escudo/pack_2
+print("el costo de cada lata de escudo es:",lata_escudo)
+print("el costo de cada lata de heineken es:",lata_heineken)
