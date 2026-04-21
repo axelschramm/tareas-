@@ -1,0 +1,10 @@
+#desarolle un programa que permita ingresar 10 numeros y al finalizar dezpliegue la suma y el promedio de los numeros ingresados
+suma = 0
+i = 1
+while i<=10:
+    numero=float(input("Ingrese el número : "))
+    suma=suma+numero
+    i=i+1
+promedio=suma/10
+print("La suma total es:",suma)
+print("El promedio es:",promedio)
