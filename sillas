@@ -1,0 +1,2 @@
+#desarolle un programa que permita ingresar cantidad de sillas por cada trabajador (10),a cada uno se le pegara lo siguiente : cada silla copnstruida a 120 pesos si construye mas de 1000 sillas se agrega un bono adicional de 20 pesos por cada silla construida sobre las 1000. al finalizar los 10 trabajadores debemos desplegar la siguiente estadistica: a ) total de sillas construidas , b)total paga , c) trabajadores sobre 1000, d) promedio de sillas ,e) total bono , f) nombre de cada jugador 
+sillas=0
