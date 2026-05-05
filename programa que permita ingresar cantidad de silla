@@ -1,0 +1,37 @@
+#desarolle un programa que permita ingresar cantidad de sillas por cada trabajador (10),a cada uno se le pegara lo siguiente : cada silla copnstruida a 120 pesos si construye mas de 1000 sillas se agrega un bono adicional de 20 pesos por cada silla construida sobre las 1000. al finalizar los 10 trabajadores debemos desplegar la siguiente estadistica: a ) total de sillas construidas , b)total paga , c) trabajadores sobre 1000, d) promedio de sillas ,e) total bono , f) nombre de cada jugador
+total_sillas = 0
+total_paga = 0
+total_bono = 0
+trabajadores_sobre_1000 = 0
+nombre_ingresado = ""
+sillas = 0
+pago_base = 0
+bono_individual = 0
+sillas_extra = 0
+pago_final = 0
+promedio_sillas = 0
+nombres = [""] * 10
+for i in range(10):
+    print("Datos del trabajador número:", i + 1)
+    nombre_ingresado = input("Nombre: ")
+    sillas = int(input("Sillas: "))
+    nombres[i] = nombre_ingresado
+    bono_individual = 0
+    pago_base = sillas * 120
+    if sillas > 1000:
+        sillas_extra = sillas - 1000
+        bono_individual = sillas_extra * 20
+        trabajadores_sobre_1000 = trabajadores_sobre_1000 + 1
+    pago_final = pago_base + bono_individual
+    total_sillas = total_sillas + sillas
+    total_paga = total_paga + pago_final
+    total_bono = total_bono + bono_individual
+promedio_sillas = total_sillas / 10
+print("a) Total de sillas construidas:", total_sillas)
+print("b) Total paga:", total_paga)
+print("c) Trabajadores sobre 1000:", trabajadores_sobre_1000)
+print("d) Promedio de sillas:", promedio_sillas)
+print("e) Total bono:", total_bono)
+print("f) Nombre de cada trabajador:")
+for n in nombres:
+    print(n)
