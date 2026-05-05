@@ -1,0 +1,24 @@
+#Desarrolle un programa que solicite hasta donde desea la serie el usuario.
+#El número que ingrese el usuario debe ser mayor a 5.
+#Ejemplo.
+#Hasta donde desea la serie: 10
+#1+2-3+4-5+6-7+8-9+10=7
+resultado = 0 
+serie = ""
+n=0
+n = int(input("Hasta donde desea la serie (mayor a 5): "))
+if n > 5:
+    for i in range(1, n + 1):
+        if i == 1:
+            resultado += i
+            serie += str(i)
+        elif i % 2 == 0:
+            resultado += i
+            serie += "+" + str(i)
+        else:
+            resultado -= i
+            serie += "-" + str(i)
+
+    print(serie + "=" + str(resultado))
+else:
+    print("El número debe ser mayor a 5.")
