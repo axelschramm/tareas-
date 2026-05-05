@@ -1,0 +1,15 @@
+import time
+while True:
+    for h in range(0, 24):
+        if h < 10:
+            print("0", end="")
+            print(f"{h}:", end="")
+        for m in range(0, 60):
+            if m < 10:
+                print("0", end="")
+                print(f"{m}:", end="")
+            for s in range(0, 60):
+                if s < 10:
+                    print("0", end="")
+                print(f"{s}") 
+                time.sleep(1)
