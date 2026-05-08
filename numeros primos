@@ -1,0 +1,6 @@
+#numero primo
+#usuario ingresa cantidad de primos 
+n=0
+n=int(input("ingrese numero:"))
+if n<2:
+    print("no es primo ")
