@@ -1,0 +1,21 @@
+#numeros amigos
+n=0
+n2=0
+suma=0
+suma2=0
+i=0
+n=int(input("ingrese numero:"))
+n2=int(input("ingrese segundo  numero:"))
+for i in range(1, (n // 2) + 1):
+     if n% i==0:
+      suma=suma+i
+      print("divisores del primero numero:",i)
+
+for i in range(1, (n2 // 2) + 1):
+    if n2% i==0:
+       suma2=suma2+i
+       print("divisores del segundo numero:",i)
+if suma==n2 and suma2==n:
+   print(f" si {n} y {n2} son amigos")
+else:
+   print(f" si {n} y {n2}  no son amigos")
