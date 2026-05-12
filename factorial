@@ -1,0 +1,11 @@
+#desarolle una funcion llamada factorial que retorne el factorial del numero recibido con argumento
+def factorial(n):
+    i=1
+    while n>1:
+        i=i*n
+        n=n-1
+    return i
+numero= int(input("ingrese número para calcular  factorial: "))
+resultado=factorial(numero)
+print(f"factorial:{resultado}")
+
