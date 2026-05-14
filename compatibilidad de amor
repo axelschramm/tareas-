@@ -1,0 +1,23 @@
+#Número 1(Liderazgo e Independencia): Una pareja competitiva y dinámica. Impulsan el crecimiento del otro, pero deben cuidar el egoísmo, la lucha de poder y la falta de confianza.
+#Número 2 (Unión y Cooperación): Relación romántica, empática y llena de ternura. Buscan el equilibrio mutuo, aunque corren el riesgo de caer en celos ocultos, codependencia o dudas constantes.
+#Número 3 (Comunicación y Diversión): Unión alegre, sociable y muy creativa. Disfrutan viajar y compartir con amigos. Su mayor desafío es la inmadurez, la falta de estabilidad y evitar conversaciones serias.
+#Número 4 (Estabilidad y Estructura): Una pareja sólida, organizada y enfocada en construir un futuro económico seguro. El peligro es caer en la monotonía, la terquedad, la rutina aburrida y la falta de espontaneidad.
+#Número 5 (Libertad y Aventura): Relación apasionada, flexible y llena de cambios constantes. Odian la rutina, pero les cuesta establecer compromisos a largo plazo y pueden caer en la inestabilidad emocional.
+#Número 6 (Hogar y Familia): Vínculo protector, armónico y muy enfocado en el bienestar del hogar. Su desafío es el exceso de sobreprotección, la idealización del otro y los celos por inseguridad.
+#Número 7 (Espiritualidad e Intelecto): Conexión mental y mística profunda. Respetan la solemnidad y el espacio del otro. Corren el riesgo de parecer fríos, aislarse del mundo y analizar en exceso sus sentimientos.
+#Número 8 (Poder y Éxito Material): Pareja ambiciosa que logra grandes metas financieras y proyectos juntos. Deben vigilar que la ambición material o el control absoluto no apaguen el romance y el afecto.
+#Número 9 (Amor Universal y Pasión): Relación intensa, altruista y con un profundo sentido de ayuda a los demás. Al ser tan emocionales, sufren altibajos drásticos, dramas y desilusiones si el otro no cumple sus altas expectativas.
+#el dia y mes de nacimiento 
+#0,8 dia/ 1,0 mes 1,5 dia / 1,2 mes
+#def compatibilidad(0,8,1,0,1,5,1,2)
+#def compatibilidad(d1,d1,m1,m1,d2,d2,m2,m2)
+#0+8+1+0+1+5+1+2=18=1+8=9
+#p="hola"
+#l2=p[1]
+#print(l2)
+def compatibilidad(d1p1,d2p1,m1p1,m2p1,d1p2,d2p2,m1p2,m2p2):
+    suma=(d1p1,d2p1,m1p1,m2p1)+(d1p2,d2p2,m1p2,m2p2)
+    msj="resultado----\n"
+    if suma==11 or suma==22:
+        if suma==11:
+            msj=msj+"ehh tienen un numero naestro "
