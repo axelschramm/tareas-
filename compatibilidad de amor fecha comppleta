@@ -1,0 +1,57 @@
+def compatibilidad_del_amor(fecha1, fecha2):
+    sum_p1 = int(fecha1[0]) + int(fecha1[1]) + int(fecha1[3]) + int(fecha1[4]) + \
+             int(fecha1[6]) + int(fecha1[7]) + int(fecha1[8]) + int(fecha1[9])
+    
+    # Extraemos los números de la fecha 2 de la misma forma
+    sum_p2 = int(fecha2[0]) + int(fecha2[1]) + int(fecha2[3]) + int(fecha2[4]) + \
+             int(fecha2[6]) + int(fecha2[7]) + int(fecha2[8]) + int(fecha2[9])
+    
+    f = sum_p1 + sum_p2
+    
+    msj = f"Suma total de los dígitos: {f} \n"
+    
+    if f == 11:
+        msj += "Resultado: Ehhhh tienen un número maestro / familia"
+        return msj
+    elif f == 22:
+        msj += "Resultado: Ehhhh tienen un número maestro / proyecto vida"
+        return msj
+    
+    nf = f
+    while nf > 9:
+        c = str(nf)
+        n1 = int(c[0])
+        n2 = int(c[1])
+        nf = n1 + n2
+    
+    if nf == 1: 
+        msj += "Resultado: #Número 1(Liderazgo e Independencia): Una pareja competitiva y dinámica..."
+    if nf == 2:
+        msj += "Resultado: #Número 2 (Unión y Cooperación): Relación romántica, empática y llena de ternura..."
+    if nf == 3: 
+        msj += "Resultado: #Número 3 (Comunicación y Diversión): Unión alegre, sociable y muy creativa..."
+    if nf == 4: 
+        msj += "Resultado: #Número 4 (Estabilidad y Estructura): Una pareja sólida, organizada y enfocada..."
+    if nf == 5: 
+        msj += "Resultado: #Número 5 (Libertad y Aventura): Relación apasionada, flexible y llena de cambios..."
+    if nf == 6: 
+        msj += "Resultado: #Número 6 (Hogar y Familia): Vínculo protector, armónico y enfocado..."
+    if nf == 7: 
+        msj += "Resultado: #Número 7 (Espiritualidad e Intelecto): Conexión mental y mística profunda..."
+    if nf == 8:
+        msj += "Resultado: #Número 8 (Poder y Éxito Material): Pareja ambiciosa que logra grandes metas..."
+    if nf == 9:
+        msj += "Resultado: #Número 9 (Amor Universal y Pasión): Relación intensa, altruista y emocional..."
+
+    return msj
+
+print("--- Calculadora Numerológica ---")
+print("Introduce la fecha con formato DD/MM/AAAA ")
+
+f1 = input("Fecha Persona 1: ")
+f2 = input("Fecha Persona 2: ")
+
+if len(f1) == 10 and len(f2) == 10:
+    print("\n" + compatibilidad_del_amor(f1, f2))
+else:
+    print("Error: Asegúrate de usar el formato DD/MM/AAAA.")
