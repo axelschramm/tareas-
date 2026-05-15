@@ -15,9 +15,56 @@
 #p="hola"
 #l2=p[1]
 #print(l2)
-def compatibilidad(d1p1,d2p1,m1p1,m2p1,d1p2,d2p2,m1p2,m2p2):
-    suma=(d1p1,d2p1,m1p1,m2p1)+(d1p2,d2p2,m1p2,m2p2)
-    msj="resultado----\n"
-    if suma==11 or suma==22:
-        if suma==11:
-            msj=msj+"ehh tienen un numero naestro "
+def compatibilidad_del_amor(D1P1, D2P1, M1P1, M2P1, D1P2, D2P2, M1P2, M2P2):
+    
+    f = D1P1 + D2P1 + M1P1 + M2P1 + D1P2 + D2P2 + M1P2 + M2P2
+    msj = f"Suma total: {f} \n"
+    
+    
+    if f == 11:
+        msj += "Resultado: Ehhhh tienen un número maestro / familia"
+        return msj
+    elif f == 22:
+        msj += "Resultado: Ehhhh tienen un número maestro / proyecto vida"
+        return msj
+    
+   
+    nf = f
+    while nf > 9:
+        c = str(nf)
+        n1 = int(c[0])
+        n2 = int(c[1])
+        nf = n1 + n2
+    
+    
+    if nf == 1: msj += "Resultado: Número 1(Liderazgo e Independencia)..."
+    if nf == 2: msj += "Resultado: Número 2 (Unión y Cooperación)..."
+    if nf == 3: msj += "Resultado: Número 3 (Comunicación y Diversión)..."
+    if nf == 4: msj += "Resultado: Número 4 (Estabilidad y Estructura)..."
+    if nf == 5: msj += "Resultado: Número 5 (Libertad y Aventura)..."
+    if nf == 6: msj += "Resultado: Número 6 (Hogar y Familia)..."
+    if nf == 7: msj += "Resultado: Número 7 (Espiritualidad e Intelecto)..."
+    if nf == 8: msj += "Resultado: Número 8 (Poder y Éxito Material)..."
+    if nf == 9: msj += "Resultado: Número 9 (Amor Universal y Pasión)..."
+
+    return msj
+
+
+
+print("--- Calculadora de Compatibilidad Numerológica ---")
+print("Por favor, ingresa las fechas en formato DDMM (ejemplo: 0810 para 8 de octubre)")
+
+
+p1 = input("Fecha Persona 1 (DDMM): ")
+p2 = input("Fecha Persona 2 (DDMM): ")
+
+
+if len(p1) == 4 and len(p2) == 4:
+    
+    resultado = compatibilidad_del_amor(
+        int(p1[0]), int(p1[1]), int(p1[2]), int(p1[3]), 
+        int(p2[0]), int(p2[1]), int(p2[2]), int(p2[3])
+    )
+    print("\n" + resultado)
+else:
+    print("Error: Debes ingresar 4 números para cada fecha (ej: 0105).")
