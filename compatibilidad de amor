@@ -67,4 +67,4 @@ if len(p1) == 4 and len(p2) == 4:
     )
     print("\n" + resultado)
 else:
-    print("Error: Debes ingresar 4 números para cada fecha (ej: 0105).")
+    print("Error: Debes ingresar 4 números para cada fecha ).")
