@@ -1,0 +1,9 @@
+def primer_digito(numero):
+    if numero <= 0 or numero >= 100000:
+        return 0
+    while numero >= 10:
+        numero = numero // 10
+    return numero 
+num = int(input("Ingrese su dígito: "))
+digito = primer_digito(num)
+print("El primer dígito es igual a", digito)     
