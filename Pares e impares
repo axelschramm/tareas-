@@ -1,0 +1,10 @@
+impar = 0
+x = 1
+while x <= 20:
+    num = int(input(f"Ingrese un dígito [{x}/20]: "))
+    if num %2 == 0:
+        par = par + 1
+    else:
+        impar = impar + 1
+    x = x + 1
+print(f"Usted ingresó {par} números pares y {impar} números impares")
