@@ -1,0 +1,76 @@
+#1.	Desarrolle una función que reciba 2 argumentos(desde y hasta) y retorne la suma de todos los números primos que estén en ese rango.
+desde=0
+hasta=0
+resultado=0
+i=0
+num=0
+def es_primo(n):
+    if n <= 1:
+        return False
+        
+    divisores = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            divi = divi + 1
+    return divi== 2
+
+def rango_primos(desde, hasta):
+    suma = 0
+    for num in range(desde, hasta + 1):
+        if es_primo(num):
+            suma = suma + num
+    return suma
+
+desde= int(input("Ingrese el número de inicio: "))
+hasta = int(input("Ingrese el número final: "))
+resultado = rango_primos(desde, hasta)
+print(f"\nLa suma de los números primos entre {desde} y {hasta} es: {resultado}")
+
+#2 Desarrolle un programa que permita ingresar 20 números y despliegue por pantalla cuantos positivos y cuantos negativos ingresó el usuario
+posi = 0
+nega = 0
+i = 1
+
+while i <= 20:
+    num = int(input(f"Ingrese un dígito [{i}/20]: "))
+    if num > 0:
+        posi = posi + 1
+    else:
+        nega = nega + 1
+    i = i + 1
+
+print(f"Usted ingresó {posi} números positivos y {nega} números negativos")
+
+
+#3 Desarrolle una función que reciba un número como argumento, y retorne el siguiente número primo que encuentre después del número recibido como parámetro
+def siguiente(n):
+    n = n + 1
+    while True:
+        contador = 0
+        for i in range (1,n+1):
+            if n % i == 0:
+                contador = contador + 1
+        if contador == 2:
+            return n
+        n = n + 1
+numero= int(input("Ingrese su dígito: "))
+primo = siguiente(numero)
+print("El siguiente número primo es", primo)
+
+
+#4 Desarrolle una función que reciba un numero como argumento y retorne el primer dígito de ese número, la función debe validar que el número recibido sea positivo y menor a cien mil, de lo contrario retorna un cero que el argumento no cumple con las restricciones.
+def primer_digito(numero):
+    if numero <= 0 or numero >= 100000:
+        return 0
+    while numero >= 10:
+        numero = numero // 10
+    return numero 
+
+numero = int(input("Ingrese su numero: "))
+digito = primer_digito(numero)
+
+if digito == 0:
+    print("El argumento no cumple con las restricciones")
+else:
+    print("El primer dígito es igual a", digito)
+
