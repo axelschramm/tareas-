@@ -1,0 +1,9 @@
+#el usuario debe indicar cuantos elementos quiere en una lista 
+numero=int(input("Ingrese los elementos que desea en la lista: "))
+lista=[]
+for i in range (numero):
+    if i%2==0:
+        lista.append(0)
+    else:
+        lista.append(1)
+print(lista)
