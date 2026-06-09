@@ -1,0 +1,20 @@
+# ej.Desarrolle una función que reciba un número como argumento y retorne una lista con la cantidad de elementos
+# recibidos en el argumento, la lista debe tener la siguiente estructura.
+# 
+# ej. número 10 
+# funcion(n: int) -> list[1,3,5,7,9,10,8,6,4,2]
+
+def argumento(cantidad: int)-> list:
+    lista = []
+    for i in range(cantidad):
+        if i % 2 == 0:
+            i=i+1
+            lista.append(i) 
+        else:
+            lista.append(i * 2)  
+    return lista
+
+#-------------------------------------------
+
+cantidad = int(input("Ingrese los elementos que desea en la lista: "))
+print(argumento(cantidad))
