@@ -1,0 +1,16 @@
+#desarolle una funcion que reciba una lista como argumento eliminar todos los elementos negativos de la lista y retorne la lista actualizada 
+def argumento(lista):
+    i = 0
+    while i < len(lista):
+        if lista[i] < 0:
+            del lista[i]
+        else:
+            i += 1
+    return lista
+segunda_lista=[]
+cantidad = int(input("Ingrese los elementos que desea en la lista: "))
+for x in range (cantidad):
+  numero = int(input(f"Ingrese el número {x + 1}: "))
+  segunda_lista.append(numero)
+print("lista original",segunda_lista)
+print("Lista sin negativos:", argumento(segunda_lista))
