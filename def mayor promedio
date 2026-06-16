@@ -1,0 +1,33 @@
+
+# desarolle una funcion que reciba una lista como argumento y retorne una lista con todos los elementos mayores al promedio , no se puede usar la funcion sum
+def mayores_al_promedio(lista):
+    cantidad = len(lista)
+    if cantidad == 0:
+        return []
+    
+    suma = 0
+    i = 0
+    while i < cantidad:
+        suma = suma + lista[i]
+        i = i + 1
+    promedio = suma / cantidad
+    print("El promedio es:", promedio)
+    
+    mayores = []
+    i = 0
+    while i < cantidad:
+        if lista[i] > promedio:
+            mayores.append(lista[i])
+        i = i + 1
+        
+    return mayores
+
+cantidad_notas = int(input("Ingrese cantidad de notas: "))
+mi_lista = []
+contador = 0
+while contador < cantidad_notas:
+    num = float(input(f"Ingrese la nota  {contador + 1}: "))
+    mi_lista.append(num)
+    contador = contador + 1
+resultado = mayores_al_promedio(mi_lista)
+print("Los números mayores al promedio son:", resultado)
