@@ -1,0 +1,21 @@
+#desarolle una funcion que reciba dos argumentos un numero y una lista . la funcion debe retornar una lista agregando el numero del argumento a una nueva lista .solo debe agregarsi el numero es mayor al mayor elemento de la lista 
+def agrega(num: int, lista: list) -> list:
+    nueva_lista = list(lista)
+    
+    if not lista:
+        nueva_lista.append(num)
+        return nueva_lista
+    
+    mayor_actual = lista[0]
+    for elemento in lista:
+        if elemento > mayor_actual:
+            mayor_actual = elemento
+    if num > mayor_actual:
+        nueva_lista.append(num)
+        
+    return nueva_lista
+lista_base = [10, 9, 6, 4, 8, 1]
+print(f"La lista actual es: {lista_base}")
+numero_usuario = int(input("Introduce el número que deseas intentar agregar: "))
+resultado = agrega(numero_usuario, lista_base)
+print(f"Resultado final de la lista: {resultado}")
