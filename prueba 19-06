@@ -1,0 +1,43 @@
+#Desarrolle una función llamada invertir(lista[]) que reciba una lista de números enteros como argumento y retorne la misma lista invertida.
+def invertir(lista):
+    izquierda = 0
+    derecha = len(lista) - 1
+    
+    while izquierda < derecha:
+        # Intercambio de valores
+        lista[izquierda], lista[derecha] = lista[derecha], lista[izquierda]
+        izquierda = izquierda+1
+        derecha =derecha- 1
+        
+    return lista
+
+l = []
+cantidad = int(input("¿Cuántos números desea ingresar?: "))
+for i in range(cantidad):
+    num = int(input(f"Ingrese el número {i + 1}: "))
+    l.append(num)
+print("\nTu lista original es:", l)
+lista_resultado = invertir(l)
+print("Tu lista invertida es:", lista_resultado) 
+
+
+
+
+#Desarrolle un programa donde el usuario ingrese 10 números enteros para poblar una lista.
+#Nota: No puede ingresar números repetidos ni menores al primer elemento de la llista, el sistema debe desplegar por pantalla “número ya ingresado, reintente”.
+l = []
+i = 1
+while i <= 10:
+    n = int(input(f"ingrese numero {i}: "))
+    rep = False
+    for elemento in l:
+        if elemento == n:
+            rep = True
+    if i > 1 and n < l[0]:
+        rep = True 
+    if rep == True:
+        print("número ya ingresado, reintente")
+    else:
+        l.append(n)
+        i = i + 1
+print(l)
