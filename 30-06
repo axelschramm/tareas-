@@ -1,0 +1,18 @@
+ata = 1
+while ata <= 6:
+    print(ata, end="")
+    ata1 = 1
+    while ata1 < ata:
+        print(ata1, end="")
+        ata1 += 1
+    ata += 1
+    print(ata - 1)
+ata = 5
+while ata >= 1:
+    print(ata, end="")
+    ata1 = 1
+    while ata1 < ata:
+        print(ata1, end="")
+        ata1 += 1
+    ata -= 1
+    print(ata + 1)
