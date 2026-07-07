@@ -35,3 +35,35 @@ print(diccionario.get('new_key'))
 # Print: None , no encontro el valor 
 print(diccionario.get('new_key', 'default'))
 # Print: default
+
+#obtener un listado con todas las claves de un diccionario
+diccionario = {
+    'hola': 'MUNDO',
+    'msg': 'ok'
+}
+
+print(list(diccionario))
+# Print: ['Hola', 'msg']
+
+#obtener el número de elementos de un diccionario
+diccionario = {
+    'hola': 'mundo',
+    'msg': 'ok'
+}
+
+print(len(diccionario))
+# Print: 2
+
+
+#comprobar si existe una clave o no dentro de un diccionario
+diccionario = {
+    'hola': 'mundo',
+    'msg': 'ok'
+}
+
+result = 'hola' in diccionario
+print(result)
+# Print: True
+result2 = 'msg' not in diccionario
+print(result2)
+# Print: False
