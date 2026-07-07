@@ -1,0 +1,8 @@
+tupla = (1,2,3,4)
+# También de esta forma
+tupla = tuple((1, 2, 3, 4))
+
+#acceder a un valor dada una posición lo haremos igual que con las listas
+tupla = tuple(('x', 'b', 'm', 'r'))
+print(tupla[1])
+# Print: b
