@@ -1,0 +1,37 @@
+#diccioario vacio con dict()
+diccionario=dict()
+#diccionario vacio con llaves
+diccionario={}
+#diccionario iniciando con valores 
+diccionario = {'status': True, 'msg': 'ok'}
+
+#para acceder al valor de un elemento se escribe el nombre de la variabe seguido de corchetes, el nombre de la clave y cierren de corchetes
+diccionario={ 'hola':'mundo','msg':'ok'}
+#imprime el siguiente elemento del diccionario
+print(diccionario['hola'])
+
+#Cuando iteramos en diccionarios podemos hacerlo a través de las claves, valores o ítems (pares clave-valor). Para ello podremos usar el bucle for y para iterar sobre las claves, el nombre del diccionario y el método keys(), en el caso de los valores utilizaremos el método values() y para iterar sobre la clave y el valor, usaremos el método items().
+diccionario={ 'hola':'mundo','msg':'ok'}
+for key in diccionario.keys():
+    print(key)
+
+# Iterar en valores
+for value in diccionario.values():
+    print(value)
+
+# Iterar en ítems
+for key, value in diccionario.items():
+    print(f'key {key}, value {value}')
+
+#vaciar in diccionario
+diccionario.clear()
+#muestra el diccionario vacio
+print(diccionario)
+
+#Otra forma de obtener el valor de una clave de un diccionario es utilizando el método get(). Dentro de este método podremos pasar la clave que estamos buscando y opcionalmente un valor por defecto si no encuentra ese valor. En el caso de no encontrarlo y no poner ningún valor por defecto, devolverá None.
+print(diccionario.get('hola'))
+# Print: mundo
+print(diccionario.get('new_key'))
+# Print: None , no encontro el valor 
+print(diccionario.get('new_key', 'default'))
+# Print: default
